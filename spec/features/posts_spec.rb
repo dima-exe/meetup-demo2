@@ -22,6 +22,8 @@ feature "Posts", :type => :feature do
 
     post = Post.find_by title: 'New post title'
     expect(post).to be
+
+    expect(page).to have_text(post.title)
   end
 end
 
